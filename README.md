@@ -5,7 +5,6 @@ A Twitch Chat Bot that allows viewers to take on the difficult life of raising l
 # Requirements
 Python 3.6+ with pip: https://www.python.org/downloads/
 
-# Packages
 Type the corresponding commands into a command shell
 
 dotenv:  pip install python-dotenv
@@ -13,7 +12,10 @@ dotenv:  pip install python-dotenv
 twitchio: pip install twitchio
 
 dateutil: pip install python-dateutil
-  
+
+# How to run
+Just run the LorePets batch executable!
+
 
 # Want to request features?
 Email: TwitchLorePets@gmail.com
