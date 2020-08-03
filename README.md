@@ -18,7 +18,7 @@ Make an account on Twitch (for your bot) or use the one you stream with. Make it
 
 Request an oauth code. You'll need to login and give the app permissions to generate it for you.  https://twitchapps.com/tmi/
 
-oauth will look like: oauth:65cbmejgiemlnyzbq1onjhkkkk7m
+oauth will look like: oauth:65cbmejgiemlnyzbq1onjhkkkk7m and be put under TMI_TOKEN
 
 Register your app with Twitch dev and request a client-id (so you can interface with Twitch's API) https://dev.twitch.tv/console/apps/create
 
