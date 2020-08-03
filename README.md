@@ -13,6 +13,19 @@ twitchio: pip install twitchio
 
 dateutil: pip install python-dateutil
 
+# Twitch Account that is set up to be a bot:
+Make an account on Twitch (for your bot) or use the one you stream with. Make it something cool like RealStreamer69 😎
+
+Request an oauth code. You'll need to login and give the app permissions to generate it for you.  https://twitchapps.com/tmi/
+
+oauth will look like: oauth:65cbmejgiemlnyzbq1onjhkkkk7m
+
+Register your app with Twitch dev and request a client-id (so you can interface with Twitch's API) https://dev.twitch.tv/console/apps/create
+
+client-id will look like: gsgx0a285jjfwui2vqzegg4xxxxvkz
+
+In the .env file, update the necessary information.  You can find all the necessary info by following the above steps.  The bot_nick will be the bot's twitch name, while the channel will be your channel!
+
 # How to run
 Just run the LorePets batch executable!
 
