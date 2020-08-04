@@ -1,0 +1,216 @@
+{
+    "Bosses": {
+        "GIANT MOLE": {
+            "Name": "Giant Mole",
+            "Strength": 10,
+            "Gold": 80000,
+            "Level": 30,
+            "Pets": [
+                "Baby Mole"
+            ],
+            "Player Pets": []
+        },
+        "DKS": {
+            "Name": "DKs",
+            "Strength": 25,
+            "Gold": 130000,
+            "Level": 50,
+            "Pets": [
+                "Dagannoth Rex",
+                "Dagannoth Prime",
+                "Dagannoth Supreme"
+            ],
+            "Player Pets": []
+        },
+        "SARACHNIS": {
+            "Name": "Sarachnis",
+            "Strength": 25,
+            "Gold": 150000,
+            "Level": 55,
+            "Pets": [
+                "Sraracha"
+            ],
+            "Player Pets": []
+        },
+        "CHAOS ELE": {
+            "Name": "Chaos Elemental",
+            "Strength": 30,
+            "Gold": 165000,
+            "Level": 55,
+            "Pets": [
+                "Chaos Elemental"
+            ],
+            "Player Pets": []
+        },
+        "KBD": {
+            "Name": "KBD",
+            "Strength": 30,
+            "Gold": 437500,
+            "Level": 60,
+            "Pets": [
+                "Prince Black Dragon"
+            ],
+            "Player Pets": []
+        },
+        "CALLISTO": {
+            "Name": "Callisto",
+            "Strength": 35,
+            "Gold": 437500,
+            "Level": 60,
+            "Pets": [
+                "Callisto Cub"
+            ],
+            "Player Pets": []
+        },
+        "VETION": {
+            "Name": "Vetion",
+            "Strength": 38,
+            "Gold": 450000,
+            "Level": 65,
+            "Pets": [
+                "Vet'ion jr"
+            ],
+            "Player Pets": []
+        },
+        "SCORPIA": {
+            "Name": "Scorpia",
+            "Strength": 38,
+            "Gold": 450000,
+            "Level": 65,
+            "Pets": [
+                "Scorpia's Offspring"
+            ],
+            "Player Pets": []
+        },
+        "VENENATIS": {
+            "Name": "Venenatis",
+            "Strength": 30,
+            "Gold": 562500,
+            "Level": 70,
+            "Pets": [
+                "Venenatis Spiderling"
+            ],
+            "Player Pets": []
+        },
+        "KRIL": {
+            "Name": "Kril",
+            "Strength": 35,
+            "Gold": 750000,
+            "Level": 75,
+            "Pets": [
+                "K'ril Tsutsaroth"
+            ],
+            "Player Pets": []
+        },
+        "GRAARDOR": {
+            "Name": "Graardor",
+            "Strength": 40,
+            "Gold": 875000,
+            "Level": 78,
+            "Pets": [
+                "General Graardor"
+            ],
+            "Player Pets": []
+        },
+        "KREEARRA": {
+            "Name": "Kreearra",
+            "Strength": 42,
+            "Gold": 937500,
+            "Level": 80,
+            "Pets": [
+                "Kree'arra"
+            ],
+            "Player Pets": []
+        },
+        "ZILYANA": {
+            "Name": "Zilyana",
+            "Strength": 50,
+            "Gold": 1125000,
+            "Level": 85,
+            "Pets": [
+                "Commander Zilyana"
+            ],
+            "Player Pets": []
+        },
+        "CORP": {
+            "Name": "Corp Beast",
+            "Strength": 58,
+            "Gold": 1187500,
+            "Level": 88,
+            "Pets": [
+                "Dark Core",
+                "Corporeal Critter"
+            ],
+            "Player Pets": []
+        },
+        "ZULRAH": {
+            "Name": "Zulrah",
+            "Strength": 35,
+            "Gold": 3125000,
+            "Level": 90,
+            "Pets": [
+                "Snakeling"
+            ],
+            "Player Pets": []
+        },
+        "VORKATH": {
+            "Name": "Vorkath",
+            "Strength": 65,
+            "Gold": 4687500,
+            "Level": 100,
+            "Pets": [
+                "Vorki"
+            ],
+            "Player Pets": []
+        },
+        "NIGHTMARE": {
+            "Name": "Nightmare",
+            "Strength": 100,
+            "Gold": 625000,
+            "Level": 125,
+            "Pets": [
+                "Little Nightmare"
+            ],
+            "Player Pets": []
+        },
+        "COX": {
+            "Name": "COX",
+            "Strength": 120,
+            "Gold": 93750000,
+            "Level": 130,
+            "Pets": [
+                "Olmlet"
+            ],
+            "Player Pets": [
+                "Vasa Nistirio",
+                "Tekton",
+                "Vespula"
+            ]
+        },
+        "TOB": {
+            "Name": "TOB",
+            "Strength": 145,
+            "Gold": 312500000,
+            "Level": 145,
+            "Pets": [
+                "Lil Zik"
+            ],
+            "Player Pets": [
+                "Nylocas Vasilias",
+                "Sotetseg",
+                "Xarpus"
+            ]
+        },
+        "INFERNO": {
+            "Name": "Inferno",
+            "Strength": 300,
+            "Gold": 0,
+            "Level": 151,
+            "Pets": [],
+            "Player Pets": [
+                "Jal-nib-rek",
+                "Tzrek-Zuk"
+            ]
+        }
+    }
+}
