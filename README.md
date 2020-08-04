@@ -3,15 +3,7 @@ A Twitch Chat Bot that allows viewers to take on the difficult life of raising l
 
 
 # Requirements
-Python 3.6+ with pip: https://www.python.org/downloads/
-
-Type the corresponding commands into a command shell
-
-dotenv:  pip install python-dotenv
-
-twitchio: pip install twitchio
-
-dateutil: pip install python-dateutil
+A twitch account that is set up to be a chat bot.
 
 # Twitch Account that is set up to be a bot:
 Make an account on Twitch (for your bot) or use the one you stream with. Make it something cool like RealStreamer69 😎
@@ -24,10 +16,10 @@ Register your app with Twitch dev and request a client-id (so you can interface 
 
 client-id will look like: gsgx0a285jjfwui2vqzegg4xxxxvkz
 
-In the .env file, update the necessary information.  You can find all the necessary info by following the above steps.  The bot_nick will be the bot's twitch name, while the channel will be your channel!
+In the .env file in build, update the necessary information.  You can find all the necessary info by following the above steps.  The bot_nick will be the bot's twitch name, while the channel will be your channel!
 
 # How to run
-Just run the LorePets batch executable!
+Just run the LorePets executable!
 
 
 # Want to request features?
