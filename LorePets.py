@@ -317,42 +317,6 @@ async def pethelp(ctx):
     await ctx.send('https://docs.google.com/document/d/1tlozgA_Y-HYJjM2Cqc47LLnmM1lszbSgB-ap56rDxko/edit?usp=sharing')
 
 
-@bot.command(name='petgiveaway')
-async def petgiveaway(ctx):
-    if 'loreosrs' != ctx.author.name.lower():
-        return
-    namelist = []
-    await ctx.send('A pet giveaway has been started!  Type !petjoin in order to join the giveaway!')
-    await asyncio.sleep(60)
-    await ctx.send('One minute remaining!')
-    await asyncio.sleep(30)
-    await ctx.send('30 seconds remaining!')
-    await asyncio.sleep(30)
-    await ctx.send('Pet giveaway has ended!')
-    with open('names.txt', 'r') as myfile:
-        for i in myfile:
-            namelist.append(i.lower().replace('\n', ''))
-    namelist.remove('loreosrs')
-    choice = random.choice(namelist)
-    await add_pet(ctx, choice, 'Internet Troll', 1)
-    namelist.remove(choice)
-
-
-@bot.command(name='petjoin')
-async def petjoin(ctx):
-    name = ctx.author.name.lower()
-    with open('names.txt', 'r') as myfile:
-        if ctx.author.name.lower() in myfile:
-            return
-    with open('playerdata.json', 'r') as jsonfile:
-        json_content = json.load(jsonfile)
-        if 'True' in json_content['Players'][name]['Pet']:
-            await ctx.send(f'{name}, you\'ve already gotten a pet!')
-            return
-    with open('names.txt', 'a') as myfile:
-        myfile.write(ctx.author.name.lower() + '\n')
-
-
 @bot.command(name='pet')
 async def pet(ctx):
     name = ctx.author.name.lower()
