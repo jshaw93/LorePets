@@ -6,11 +6,39 @@ import random
 import json
 import locale
 from dateutil.parser import parse
+import time
 
 locale.setlocale(locale.LC_ALL, 'en_US')
 spoke = False
 join = False
+first_launch = False
 pet_dict = {}
+playerdatadir = 'Data/playerdata.json'
+bossdatadir = 'Data/bosses.json'
+expdatadir = 'Data/experience.json'
+
+if not os.path.exists('Data'):
+    os.mkdir('Data')
+if not os.path.exists(playerdatadir):
+    first_launch = True
+    print('Launching first time setup!')
+    with open('playerdata.json', 'r') as myfile:
+        my_content = json.load(myfile)
+    with open(playerdatadir, 'w+') as jsonfile:
+        json.dump(my_content, jsonfile, indent=4)
+if not os.path.exists('Data/.env'):
+    if not first_launch:
+        first_launch = True
+        print('Launching first time setup!')
+    with open('.env', 'r') as myfile:
+        x = myfile.read()
+    with open('Data/.env', 'w+') as file:
+        file.write(x)
+if first_launch:
+    print('First time setup complete, please update data in build/Data/.env!')
+    time.sleep(60)
+    exit(0)
+
 load_dotenv()
 
 bot = commands.Bot(
@@ -23,7 +51,8 @@ bot = commands.Bot(
 
 
 async def save(dictionary):
-    with open('playerdata.json', 'w') as myfile:
+    print('Saving...')
+    with open(playerdatadir, 'w') as myfile:
         json.dump(dictionary, myfile, indent=4)
 
 
@@ -36,7 +65,7 @@ async def save_timer():
 
 async def on_start():
     global pet_dict
-    with open('playerdata.json', 'r') as jsonfile:
+    with open(playerdatadir, 'r') as jsonfile:
         pet_dict = json.load(jsonfile)
     await save_timer()
 
@@ -324,7 +353,7 @@ async def levelup(ctx, goldvar=None):
         pettype = pet_dict['Players'][name]['Selected']
         levelvar = pet_dict['Players'][name]['Pets'][pettype]['Level']
         gold = pet_dict['Players'][name]['Gold']
-        with open('experience.json', 'r') as jsonfile:
+        with open(expdatadir, 'r') as jsonfile:
             json_content = json.load(jsonfile)
             exp_var = json_content['Experience'][str(levelvar)]
             if target_gold is not None:
@@ -401,7 +430,7 @@ async def unlock(ctx, target=None, target2=None, target3=None):
     name = ctx.author.name.lower()
     timestamp = str(ctx.message.timestamp)
     if target is None:
-        with open('bosses.json', 'r') as jsonfile:
+        with open(bossdatadir, 'r') as jsonfile:
             try:
                 pettype = pet_dict['Players'][name]['Selected']
             except:
@@ -455,7 +484,7 @@ async def unlock(ctx, target=None, target2=None, target3=None):
     petlevel = pet_dict['Players'][name]['Pets'][pettype]['Level']
     petrarity = pet_dict['Players'][name]['Pets'][pettype]['Rarity']
     gold = pet_dict['Players'][name]['Gold']
-    with open('bosses.json', 'r') as bossjson:
+    with open(bossdatadir, 'r') as bossjson:
         boss_content = json.load(bossjson)
         bosslist = []
         for i in boss_content['Bosses']:
