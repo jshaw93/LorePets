@@ -1,8 +1,6 @@
 # LorePets
 A Twitch Chat Bot that allows viewers to take on the difficult life of raising little monsters for profit.
 
-# Updates
-Please make sure to backup your .env and playerdata.json files in BUILD before updating!
 
 # Requirements
 A twitch account that is set up to be a chat bot.
