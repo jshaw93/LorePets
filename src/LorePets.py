@@ -494,15 +494,15 @@ async def unlock(ctx, target=None, target2=None, target3=None):
             pet_dict['Players'][name]['Timestamp'] = timestamp
             pet_dict['Players'][name]['BossTimestamp'] = timestamp
     bosslist = []
-    boss_str = pet_dict['Bosses'][target]['Strength']
-    boss_gold = pet_dict['Bosses'][target]['Gold']
-    boss_pets = pet_dict['Bosses'][target]['Pets']
-    player_pets = pet_dict['Bosses'][target]['Player Pets']
-    for i in pet_dict['Bosses']:
-        if petlevel >= pet_dict['Bosses'][i]['Level']:
+    boss_str = boss_content['Bosses'][target]['Strength']
+    boss_gold = boss_content['Bosses'][target]['Gold']
+    boss_pets = boss_content['Bosses'][target]['Pets']
+    player_pets = boss_content['Bosses'][target]['Player Pets']
+    for i in boss_content['Bosses']:
+        if petlevel >= boss_content['Bosses'][i]['Level']:
             bosslist.append(i)
     if target.upper() not in bosslist:
-        boss_lvl = pet_dict['Bosses'][target]['Level']
+        boss_lvl = boss_content['Bosses'][target]['Level']
         await ctx.channel.send(f'{name}, you need a level {boss_lvl} pet!')
         return
     await ctx.channel.send(f'{name}, your pet {pettype}, {petname}, has left to combat a strong creature!')
